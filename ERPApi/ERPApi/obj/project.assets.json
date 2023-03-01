@@ -2778,7 +2778,7 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\ce.obregon\\.nuget\\packages\\": {}
+    "C:\\Users\\har.calderon\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
@@ -2786,11 +2786,11 @@
       "projectUniqueName": "D:\\.net core\\API Net 6 with ADO & SQL Server desde cero\\ERPApi\\ERPApi\\ERPApi.csproj",
       "projectName": "ERPApi",
       "projectPath": "D:\\.net core\\API Net 6 with ADO & SQL Server desde cero\\ERPApi\\ERPApi\\ERPApi.csproj",
-      "packagesPath": "C:\\Users\\ce.obregon\\.nuget\\packages\\",
+      "packagesPath": "C:\\Users\\har.calderon\\.nuget\\packages\\",
       "outputPath": "D:\\.net core\\API Net 6 with ADO & SQL Server desde cero\\ERPApi\\ERPApi\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\ce.obregon\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\har.calderon\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

@@ -110,8 +110,21 @@ namespace ERPApi.Controllers
             return await  db.TableResult("sp_obtenerCliente"); ;
 
         }
-
-
+        [HttpPost("PostCliente")]
+        public async Task<IActionResult> PostCliente(Cliente model) {
+            var Params = new Collection<SqlParameter>();
+            Params.Add(new SqlParameter("@id", model.Id));
+            Params.Add(new SqlParameter("@nombre", model.Nombre));
+            return await db.PostResult("sp_guardarCliente", Params);
+        }
+        [HttpPost("DeleteCliente")]
+        public async Task<IActionResult> DeleteCliente(int id)
+        {
+            var Params = new Collection<SqlParameter>();
+            Params.Add(new SqlParameter("@id", id));
+             
+            return await db.PostResult("sp_eliminarCliente", Params);
+        }
 
     }
 

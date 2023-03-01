@@ -28,3 +28,42 @@ as
 begin
 	select * from  cliente;
 end;
+
+GO
+create or alter procedure sp_guardarCliente
+@id int,
+@nombre  varchar(50)
+as
+begin
+	declare @MsgError nvarchar(MAX)='';
+	begin try
+if exists(select 1 from cliente where Id=@id)
+begin
+
+	update cliente set nombre=@nombre where id=@id;
+	set @MsgError='Registro actualizado';
+end	else
+      begin 
+	insert into cliente(nombre) values(@nombre);
+	set @MsgError='Registro agregado'
+    end
+
+	end try
+	begin catch
+	set @MsgError=ERROR_MESSAGE();
+	RAISERROR(@MsgError,16,227);
+	end catch
+end
+
+go
+create or alter procedure sp_eliminarCliente
+@id int
+as
+begin 
+ delete cliente where id=@id;
+end;
+
+
+select * from cliente; 
+
+exec sp_guardarCliente @nombre='r123'
