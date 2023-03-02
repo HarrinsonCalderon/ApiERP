@@ -25,11 +25,16 @@ namespace ERPApi.Convertidores
                 {
                     object columnValue = row[column];
 
+                    //para darle valor a los valores nulos
+                    //if (columnValue==null || columnValue is DBNull) {
+                    //    columnValue = "null";
+                    //}
+
                     // If necessary:
-                    if (options.IgnoreNullValues)
-                    {
-                        // Do null checks on the values here and skip writing.
-                    }
+                    //if (options.IgnoreNullValues)
+                    //{
+                    //    // Do null checks on the values here and skip writing.
+                    //}
 
                     writer.WritePropertyName(column.ColumnName);
                     JsonSerializer.Serialize(writer, columnValue, options);
